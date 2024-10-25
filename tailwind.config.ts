@@ -1,7 +1,7 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  content: ["./src/**/*.{twig,ts,js}"],
+  content: ["./src/**/*.{twig,ts,html}"],
   plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 
   theme: {
