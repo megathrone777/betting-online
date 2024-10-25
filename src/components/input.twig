@@ -4,12 +4,35 @@
 
   {% if type == "text" %}
     <div class="w-full">
-      <input class="{{ defaults }} w-full h-12 px-4 rounded-lg" id="{{ id  }}" placeholder="{{ label }}" type="text">
+      <input 
+        class="
+          {{ defaults }} 
+          h-12 
+          px-4 
+          rounded-lg
+          w-full 
+        " 
+        id="{{ id }}" 
+        placeholder="{{ label }}" 
+        type="text"
+      >
     </div>
   {% elseif type == "checkbox" %}
     <div class="relative pl-5">
       <input
-        class="{{ defaults }} appearance-none absolute cursor-pointer inline-block left-0 top-[3px] w-3 h-3 rounded-[3px] checked:bg-yellow-400" 
+        class="
+          {{ defaults }} 
+          absolute 
+          appearance-none 
+          checked:bg-yellow-400
+          cursor-pointer 
+          h-3 
+          inline-block 
+          left-0 
+          rounded-[3px] 
+          top-[3px] 
+          w-3 
+        " 
         id="{{ id }}" 
         type="checkbox"
       >

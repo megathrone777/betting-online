@@ -11,7 +11,10 @@ const initLanguageSelector = (): void => {
       });
 
       document.addEventListener("click", ({ target }): void => {
-        if (!wrapperElement.contains(target as Document) && !popoverElement.classList.contains("hidden")) {
+        if (
+          !wrapperElement.contains(target as Document) &&
+          !popoverElement.classList.contains("hidden")
+        ) {
           popoverElement.classList.toggle("hidden");
         }
       });

@@ -31,7 +31,7 @@
     {% for item in items %}
       <li class="relative group lg:text-center" {{ item.items ? 'data-dropdown-trigger' : '' }}>
         {% if item.items %}
-          <span class="font-bold hover:text-yellow-400 cursor-pointer select-none lg:text-xl">
+          <span class="font-bold hover:text-yellow-400 transition-colors cursor-pointer select-none lg:text-xl">
             <span class="align-middle">{{ item.title }}</span>
 
             <svg class="h-[6px] w-3 inline-block ml-1 group-[.opened]:rotate-180 lg:hidden">
@@ -39,7 +39,7 @@
             </svg>
           </span>
         {% else %}
-          <a class="font-bold hover:text-yellow-400 lg:text-xl" href="{{ item.href }}">
+          <a class="font-bold hover:text-yellow-400 transition-colors lg:text-xl" href="{{ item.href }}">
             {{ item.title }}
           </a>
         {% endif %}
@@ -71,7 +71,16 @@
               {% for subItem in item.items %}
                 <li>
                   <a 
-                    class="leading-7 xl:leading-9 lg:leading-10 font-medium text-sm lg:text-lg hover:text-yellow-400" 
+                    class="
+                      leading-7 
+                      xl:leading-9 
+                      lg:leading-10 
+                      font-medium 
+                      text-sm 
+                      lg:text-lg 
+                      hover:text-yellow-400 
+                      transition-colors
+                    " 
                     href="#"
                   >
                     {{ subItem }}
