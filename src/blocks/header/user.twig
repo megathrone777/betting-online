@@ -1,0 +1,16 @@
+<div>
+  {% set is_granted = true %}
+  
+  {% if is_granted %}
+    <p class="font-bold flex items-center gap-x-2">
+      <img alt="User image" src="/images/user_img.svg">
+      <span class="leading-[25px] lg:hidden">Lubomír</span>
+    </p>
+  {% else %}
+    <a class="block h-6 overflow-hidden w-6" href="#">
+      <svg>
+        <use xlink:href="#userIcon"></use>
+      </svg>
+    </a>
+  {% endif %}
+</div>

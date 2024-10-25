@@ -1,0 +1,25 @@
+{%
+  set items = [
+    { "href": "https://instagram.com", "title": "Instagram" },
+    { "href": "https://youtube.com", "title": "YouTube" },
+    { "href": "https://tiktok.com", "title": "Tiktok" },
+    { "href": "https://facebook.com", "title": "Facebook" },
+  ]
+%}
+
+<ul class="grid-in-socials flex items-center gap-x-[10px] md:justify-end">
+  {% for item in items %}
+    <li class="w-5 h-5">
+      <a 
+        class="flex items-center h-full text-blue-50 hover:text-yellow-400" 
+        href="{{ item.href }}" 
+        target="_blank" 
+        title="{{ item.title }}"
+      >
+        <svg>
+          <use xlink:href="#{{ item.title | lower }}Icon2"></use>
+        </svg>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,55 @@
+{%
+  set columns = [
+    {
+      "items": [
+        "Blog",
+        "Akademie",
+        "Podcast",
+        "Online casina",
+        "Sázkové kanceláře",
+        "Tipy",
+        "Statistiky a výsledky",
+        "Soutěž",
+        "FAQ"
+      ],
+      "title": "Menu" 
+    },
+    {
+      "items": [
+        "Sport",
+        "Esport",
+        "Casino",
+        "Sázkařův svět"
+      ],
+      "title": "Blog" 
+    },
+    {
+      "items": [
+        "Kurzové sázení",
+        "Online casino",
+        "Esport sázení"
+      ],
+      "title": "Akademie" 
+    },
+  ]
+%}
+
+<div class="grid grid-areas-footer-menu md:grid-areas-footer-menu-mobile grid-cols-3 md:grid-cols-none md:justify-start gap-x-[85px] xl:gap-x-[40px] md:gap-y-8 md:gap-x-[85px] pt-8">
+  {% for column in columns %}
+    <div class="{{ loop.index == 1 ? 'grid-in-col-1' : loop.index == 2 ? 'grid-in-col-2' : 'grid-in-col-3' }}">
+      <h5 class="font-bold underline leading-6 mb-6 decoration-yellow-400 decoration-1 underline-offset-[6px] text-blue-50">
+        {{ column.title }}
+      </h5>
+
+      <ul class="flex flex-col gap-y-2">
+        {% for item in column.items %}
+          <li>
+            <a class="leading-6 text-blue-50 hover:text-yellow-400 whitespace-nowrap" href="#">
+              {{ item }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

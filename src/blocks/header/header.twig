@@ -1,0 +1,52 @@
+{% include "panel.twig" %}
+
+<div class="sticky top-0 h-20 rounded-b-lg lg:rounded-none shadow-[0_17px_33px_-2px_rgba(28,39,49,0.05)] mb-12 xl:mb-6 z-20 bg-white lg:h-[62px]">
+  <div class="container h-full">
+    <div class="flex items-center h-full justify-between gap-x-10 xl:gap-x-6 lg:gap-x-4">
+      <div class="h-10 w-[51px] overflow-hidden">
+        <a class="block h-full" href="/">
+          <svg>
+            <use xlink:href="/images/logo_img.svg#logoIcon"></use>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="grow flex justify-between lg:justify-end items-center">
+        {% include "menu.twig" %}
+        
+        <div class="flex items-center gap-x-6 lg:gap-x-4 lg:flex-row-reverse">
+          {% include "search.twig" %}
+          {% include "user.twig" %}
+          {{ button("VIP Bonusy", "primary", "normal", "button", "lg:h-8 lg:px-2 lg:min-w-[89px] lg:text-sm whitespace-nowrap") }}
+        </div>
+      </div>
+
+      <button 
+        class="
+          hidden
+          lg:flex
+          items-center
+          justify-center
+          text-blue-900
+          h-6
+          w-6
+          gap-y-[3px]
+          group
+          [&.opened]:border-2
+          [&.opened]:rounded-lg
+          [&.opened]:border-blue-900
+        "
+        data-menu-trigger
+        type="button"
+      >
+        <svg class="group-[.opened]:hidden">
+          <use xlink:href="#burgerIcon"></use>
+        </svg>
+
+        <svg class="h-[8px] hidden group-[.opened]:block w-[9px] border-1 rounded-sm border-blue-900">
+          <use xlink:href="#crossIcon"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{%
+  set items = [
+    { "href": "https://youtube.com", iconId: "youtube", "title": "Svět zdravých a úspěšných hráčů" },
+    { "href": "https://tiktok.com", iconId: "tiktok", "title": "svetuspesnychhracu" },
+    { "href": "https://instagram.com", iconId: "instagram", "title": "svetuspesnychhracu" },
+    { "href": "https://facebook.com", iconId: "facebook", "title": "Pomáháme si v sázení" },
+  ]
+%}
+
+<div class="h-20 mb-24 xl:mb-14 lg:max-w-[342px] lg:mx-auto lg:h-auto lg:mb-14">
+  <ul class="flex items-center justify-between h-full gap-x-[10px] xl:gap-x-0 lg:flex-col lg:gap-y-6">
+    {% for item in items %}
+      <li class="px-6 xl:px-3 lg:rounded-2xl lg:bg-white lg:h-20 lg:w-full lg:px-6">
+        <a
+          class="flex items-center h-full gap-x-4 group xl:gap-x-2 lg:gap-x-4"
+          href="{{ item.href }}" 
+          target="_blank" 
+          title="{{ item.title }}"
+        >
+          <svg class="w-8 h-8">
+            <use xlink:href="#{{ item.iconId }}Icon3"></use>
+          </svg>
+          
+          <span class="text-lg font-bold group-hover:text-yellow-400 whitespace-nowrap xl:text-[15px] lg:text-base">
+            {{ item.title }}
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

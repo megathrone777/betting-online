@@ -1,0 +1,28 @@
+<div class="rounded-2xl bg-white bg-opacity-[0.08] py-8 px-6 basis-[386px] lg:basis-0 lg:max-w-[500px] md:max-w-[342px]">
+  <h3 class="font-bold text-blue-50 leading-[22px] mb-6">
+    V tomto světě musíš být rychle v obraze
+  </h3>
+  
+  <p class="mb-6 leading-7 text-blue-50">
+    Jednou týdně Vám budeme posílat novinky ze světa 
+    <b>sázek</b>, dostupných <b>bonusech</b> a <b>akcích</b>!
+  </p>
+
+  <form action="#" method="POST">
+    <div class="flex flex-col items-start gap-y-6">
+      {{ input("vas.email@priklad.cz") }}
+
+      <div class="flex flex-col gap-y-2">
+        <p class="text-sm font-bold text-blue-50">Zaškrtni, co tě zajímá</p>
+
+        {{ input("Bonusy a free spiny, nové kasina, nové automaty, speciální promoakce.", "checkbox") }}
+        {{ input("Bonusy a free tipy, články o úspěšném sázení, peněžní soutěže.", "checkbox") }}
+        {{ input("Sportovní novinky", "checkbox") }}
+        {{ input("Sázkovky a casina s licenčním omezením.", "checkbox") }}
+        {{ input("Tuzemské sázkovky a kasina.", "checkbox") }}
+      </div>
+
+      {{ button("Odebírat novinky", "primary", "normal", "submit") }}
+    </div>
+  </form>
+</div>

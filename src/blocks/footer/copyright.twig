@@ -1,0 +1,24 @@
+{% set links = ["Pravidla a podmínky", "Ochrana osobních údajů", "Kontakt"] %}
+
+<div class="flex items-center justify-between h-14 md:flex-col md:h-auto md:items-start md:gap-y-4">
+  <p class="text-[11px] text-blue-50 leading-none md:order-2">Copyright &copy; - 2004 - 2024</p>
+
+  <ul class="flex items-center gap-x-1 md:order-3">
+    {% for link in links %}
+      <li class="inline-flex items-center gap-x-1 text-[11px] text-blue-50">
+        <a class="leading-none hover:text-yellow-400" href="#">
+          {{ link }}
+        </a>
+
+        {% if loop.last == false %}
+          <span class="align-middle">|</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="flex items-center gap-x-4 md:gap-x-10 md:order-first">
+    <p class="text-[11px] text-blue-50 leading-none">Účast na hazardní hře může být škodlivá</p>
+    <img alt="18+" src="/images/copyright_img.svg">
+  </div>
+</div>

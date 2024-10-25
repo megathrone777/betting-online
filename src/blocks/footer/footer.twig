@@ -1,0 +1,49 @@
+{% include "hero.twig" %}
+
+<div class="pt-20 pb-10 xl:pt-10 xl:pb-5 md:pt-8 md:pb-8 bg-center bg-no-repeat bg-cover bg-footer-bg">
+  <div class="container">
+    <div class="flex justify-between gap-x-[85px] xl:gap-x-[40px] mb-16 xl:mb-10 lg:flex-col-reverse">
+      <div 
+        class="
+          auto-rows-max
+          grid
+          grid-areas-footer-content
+          md:grid-areas-footer-content-mobile
+          md:gap-y-4
+          md:justify-start
+          pt-8 
+          basis-[216px] 
+          min-w-[216px] 
+          xl:basis-[150px] 
+          xl:min-w-[150px] 
+          lg:basis-0
+        "
+      >
+        <div class="grid-in-logo h-10 w-[51px] overflow-hidden mb-6 md:mb-0">
+          <a class="block text-white h-full" href="/">
+            <svg class="w-full">
+              <use xlink:href="/images/logo_img.svg#logoIcon"></use>
+            </svg>
+          </a>
+        </div>
+
+        <p class="grid-in-text mb-8 leading-6 text-blue-50 md:mb-0">Pomáháme hráčům sázet zodpovědně a zdravě!</p>
+        {% include "socials.twig" %}
+      </div>
+
+      {% include "menu.twig" %}
+      {% include "subscribe.twig" %}
+    </div>
+
+    <div class="mb-16 xl:mb-10 text-center px-[90px] lg:text-left lg:px-0">
+      <p class="font-thin text-blue-50 text-[11px] leading-2">
+        Tyto stránky jsou určeny pro česky mluvící občany, kteří nemají trvalý pobyt v České republice 
+        nebo Slovenské republice a nevztahuje se na ně novela zákona č. 202/1990 Sb., o loteriích a jiných 
+        podobných hrách. Pro ostatní je používání stránek zakázáno a prosíme o opuštění webu. Stránky mají 
+        čistě informativní charakter. Veškeré informace jsou určeny osobám starším 18 let.
+      </p>
+    </div>
+
+    {% include "copyright.twig" %}
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{% macro button(title, template = "primary", size = "normal", type = "button", overrides = "") %}
+  {% set defaults = "inline-block h-[46px] md:h-[44px] font-bold rounded-lg text-base min-w-[120px] px-4 leading-none" %}
+
+  {% if template == "primary" %}
+    <button
+      class="{{ defaults }} bg-yellow-400 hover:bg-yellow-100 md:hover:bg-yellow-400 {{ overrides }}"
+      type="{{ type }}"
+    >
+      {{ title }}
+    </button>
+  {% elseif template == "secondary" %}
+    <button
+      class="{{ defaults }} bg-white border-2 border-yellow-400 hover:bg-yellow-100 {{ overrides }}"
+      type="{{ type }}"
+    >
+      {{ title }}
+    </button>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,25 @@
+{%
+  set socialItems = [
+    { "href": "https://instagram.com", "title": "Instagram" },
+    { "href": "https://youtube.com", "title": "YouTube" },
+    { "href": "https://tiktok.com", "title": "Tiktok" },
+    { "href": "https://facebook.com", "title": "Facebook" },
+  ]
+%}
+
+<ul class="flex items-center gap-x-2">
+  {% for item in socialItems %}
+    <li class="w-4 h-4">
+      <a 
+        class="flex items-center h-full hover:text-yellow-400" 
+        href="{{ item.href }}" 
+        target="_blank" 
+        title="{{ item.title }}"
+      >
+        <svg>
+          <use xlink:href="#{{ item.title | lower }}Icon"></use>
+        </svg>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

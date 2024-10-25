@@ -1,0 +1,86 @@
+{%
+  set items = [
+    { "href": "#", "title": "Online casina", "items": ["Sub item 1", "Sub item 2", "Sub item 3"] },
+    { "href": "#", "title": "Sázkové kanceláře", "items": ["Sub item 1", "Sub item 2", "Sub item 3"] },
+    { "href": "#", "title": "Top herny", "items": ["Sub item 1", "Sub item 2", "Sub item 3"] },
+    { "href": "#", "title": "Tipy" },
+    { "href": "#", "title": "Blog" },
+  ]
+%}
+
+<div
+  class="
+    lg:fixed
+    lg:bg-white
+    lg:left-0
+    lg:right-0
+    lg:top-[62px]
+    lg:bottom-0
+    lg:w-full
+    lg:opacity-0
+    lg:invisible
+    lg:[&.opened]:visible
+    lg:[&.opened]:opacity-100
+    lg:transition-opacity
+    lg:transition-visibility
+  "
+  data-menu
+>
+  <ul class="flex gap-x-10 lg:h-full lg:justify-center xl:gap-x-7 lg:flex-col lg:items-center lg:gap-x-0 lg:gap-y-6">
+    {% for item in items %}
+      <li class="relative group lg:text-center" {{ item.items ? 'data-dropdown-trigger' : '' }}>
+        {% if item.items %}
+          <span class="font-bold hover:text-yellow-400 cursor-pointer select-none lg:text-xl">
+            <span class="align-middle">{{ item.title }}</span>
+
+            <svg class="h-[6px] w-3 inline-block ml-1 group-[.opened]:rotate-180 lg:hidden">
+              <use xlink:href="#angleIcon"></use>
+            </svg>
+          </span>
+        {% else %}
+          <a class="font-bold hover:text-yellow-400 lg:text-xl" href="{{ item.href }}">
+            {{ item.title }}
+          </a>
+        {% endif %}
+
+        {% if item.items %}
+          <div 
+            class="
+              absolute
+              lg:static
+              lg:h-0
+              lg:overflow-hidden
+              hidden
+              [&.opened]:block
+              lg:[&.opened]:h-auto
+              lg:block
+              rounded-lg
+              top-7
+              left-0
+              z-30
+              bg-white
+              shadow-lg
+              lg:shadow-none
+              min-w-36
+              xl:top-8
+            " 
+            data-dropdown
+          >
+            <ul class="px-4 py-2">
+              {% for subItem in item.items %}
+                <li>
+                  <a 
+                    class="leading-7 xl:leading-9 lg:leading-10 font-medium text-sm lg:text-lg hover:text-yellow-400" 
+                    href="#"
+                  >
+                    {{ subItem }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

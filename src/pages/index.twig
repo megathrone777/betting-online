@@ -1,0 +1,25 @@
+{% extends "layouts/base.twig" %}
+{% block title %}VIP Bonusy{% endblock %}
+
+{% block content %}
+  {% include "blocks/hero.twig" %}
+  
+  <div class="flex justify-between gap-x-10 mb-36 xl:gap-x-3 xl:mb-16 lg:mb-20">
+    <div class="grow">
+      {% include "blocks/bonuses/bonuses.twig" %}
+    </div>
+
+    <div class="basis-[300px] xl:basis-[220px] lg:hidden">
+      <div class="h-[600px] xl:h-[450px] mb-10 xl:mb-5">
+        <img alt="Sidebar image." class="object-cover h-full" src="/images/sidebar_img.jpg">
+      </div>
+
+      <div class="h-[250px] xl:h-[200px]">
+        <img alt="Sidebar image." class="object-cover h-full" src="/images/sidebar_img2.jpg">
+      </div>
+    </div>
+  </div>
+
+  {% include "blocks/how-it-works.twig" %}
+  {% include "blocks/socials.twig" %}
+{% endblock %}

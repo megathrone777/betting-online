@@ -1,0 +1,22 @@
+{% macro input(label, type = "text") %}
+  {% set defaults = "bg-gray-50" %}
+  {% set id = random() %}
+
+  {% if type == "text" %}
+    <div class="w-full">
+      <input class="{{ defaults }} w-full h-12 px-4 rounded-lg" placeholder="{{ label }}" type="text">
+    </div>
+  {% elseif type == "checkbox" %}
+    <div class="relative pl-5">
+      <input
+        class="{{ defaults }} appearance-none absolute cursor-pointer inline-block left-0 top-[3px] w-3 h-3 rounded-[3px] checked:bg-yellow-400" 
+        id="{{ id }}" 
+        type="checkbox"
+      >
+
+      <label class="text-sm leading-5 text-white align-top cursor-pointer" for="{{ id }}">
+        {{ label }}
+      </label>
+    </div>
+  {% endif %}
+{% endmacro %}

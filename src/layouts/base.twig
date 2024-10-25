@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="cs">
+  {% use "../blocks/head.twig" %}
+  {% block head %}{{ parent() }}{% endblock %}
+  
+  {% from "../components/button.twig" import button %}
+  {% from "../components/input.twig" import input %}
+
+  <body class="text-blue-900 lg:bg-gray-200">
+    {% include "../blocks/sprite.twig" %}
+    {% include "../blocks/header/header.twig" %}
+
+    <div>
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    {% include "../blocks/footer/footer.twig" %}
+    <script type="module" src="/src/ts/init.ts"></script>
+  </body>
+</html>
