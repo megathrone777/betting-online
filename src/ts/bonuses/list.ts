@@ -15,6 +15,7 @@ const initList = (): void => {
         const moreButtonMobileTextElement = itemElement.querySelector(
           "[data-more-mobile-text]"
         );
+        const sectionsElement = itemElement.querySelector("[data-sections]");
 
         // TODO: wrap conditions to function
         if (moreButtonElement && moreButtonTextElement) {
@@ -49,6 +50,23 @@ const initList = (): void => {
               }
             }
           );
+        }
+
+        if (sectionsElement) {
+          const sectionItems = sectionsElement.querySelectorAll("[data-item]");
+
+          if (sectionItems && !!sectionItems.length) {
+            for (const sectionItem of sectionItems) {
+              const sectionTrigger =
+                sectionItem.querySelector("[data-trigger]");
+
+              if (sectionTrigger) {
+                sectionTrigger.addEventListener("click", (): void => {
+                  sectionItem.classList.toggle("opened");
+                });
+              }
+            }
+          }
         }
       }
     }
