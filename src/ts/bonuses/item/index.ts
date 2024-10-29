@@ -242,8 +242,6 @@ const getItemTemplate = (
               </svg>
             </a>
           </div>
-
-          
         </div>
       </div>
 

@@ -33,10 +33,7 @@
         {% if item.items %}
           <span class="font-bold hover:text-yellow-400 transition-colors cursor-pointer select-none lg:text-xl">
             <span class="align-middle">{{ item.title }}</span>
-
-            <svg class="h-[6px] w-3 inline-block ml-1 group-[.opened]:rotate-180 lg:hidden">
-              <use xlink:href="#angleIcon"></use>
-            </svg>
+            {{ icon("#angleIcon", "h-[6px] w-3 inline-block ml-1 group-[.opened]:rotate-180 lg:hidden") }}
           </span>
         {% else %}
           <a class="font-bold hover:text-yellow-400 transition-colors lg:text-xl" href="{{ item.href }}">

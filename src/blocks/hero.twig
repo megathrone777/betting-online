@@ -4,23 +4,17 @@
       <ul class="flex items-center h-5 gap-x-1">
         <li class="flex items-center gap-x-1">
           <a class="text-gray-500 hover:text-yellow-400" href="/">
-            <svg class="w-4 h-4 -mt-[1px]">
-              <use xlink:href="#homeIcon"></use>
-            </svg>
+            {{ icon("#homeIcon", "w-4 h-4 -mt-[1px]") }}
           </a>
 
-          <svg class="text-gray-500 h-[11px] w-[11px]">
-            <use xlink:href="#angleBreadcrumbsIcon"></use>
-          </svg>
+          {{ icon("#angleBreadcrumbsIcon", "text-gray-500 h-[11px] w-[11px]") }}
         </li>
         {# <li class="flex items-center gap-x-1">
           <a class="text-sm leading-[25px] text-gray-500 hover:text-yellow-400" href="#">
             Some previous page link
           </a>
 
-          <svg class="text-gray-500 h-[11px] w-[11px]">
-            <use xlink:href="#angleBreadcrumbsIcon"></use>
-          </svg>
+          {{ icon("#angleBreadcrumbsIcon", "text-gray-500 h-[11px] w-[11px]") }}
         </li> #}
         <li class="flex items-center gap-x-1">
           <span class="text-sm leading-[25px] text-gray-500">

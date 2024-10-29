@@ -1,8 +1,6 @@
 <div data-search class="relative lg:hidden">
   <button data-trigger class="align-middle" type="button">
-    <svg class="h-6 w-6">
-      <use xlink:href="#searchIcon"></use>
-    </svg>
+    {{ icon("#searchIcon", "h-6 w-6") }}
   </button>
 
   <div 
@@ -22,9 +20,7 @@
     data-popover
   >
     <div class="h-[52px] relative mb-4">
-      <svg class="h-6 w-6 absolute left-0 text-gray-500 top-[50%] translate-y-[-50%]">
-        <use xlink:href="#searchIcon"></use>
-      </svg>
+      {{ icon("#searchIcon", "h-6 w-6 absolute left-0 text-gray-500 top-[50%] translate-y-[-50%]") }}
       
       <input 
         class="appearance-none bg-transparent h-full w-full pl-8 outline-none" 

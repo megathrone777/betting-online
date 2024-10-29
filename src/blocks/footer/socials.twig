@@ -16,9 +16,7 @@
         target="_blank" 
         title="{{ item.title }}"
       >
-        <svg>
-          <use xlink:href="#{{ item.title | lower }}Icon2"></use>
-        </svg>
+        {{ icon("#" ~ item.title | lower ~ "Icon2") }}
       </a>
     </li>
   {% endfor %}

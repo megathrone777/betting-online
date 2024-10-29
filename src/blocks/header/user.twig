@@ -8,9 +8,7 @@
     </p>
   {% else %}
     <a class="block h-6 overflow-hidden w-6" href="#">
-      <svg>
-        <use xlink:href="#userIcon"></use>
-      </svg>
+      {{ icon("#userIcon") }}
     </a>
   {% endif %}
 </div>

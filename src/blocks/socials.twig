@@ -17,9 +17,7 @@
           target="_blank" 
           title="{{ item.title }}"
         >
-          <svg class="w-8 h-8">
-            <use xlink:href="#{{ item.iconId }}Icon3"></use>
-          </svg>
+          {{ icon("#" ~ item.iconId ~ "Icon3", "w-8 h-8") }}
           
           <span 
             class="

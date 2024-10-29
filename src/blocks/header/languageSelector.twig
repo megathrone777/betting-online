@@ -1,12 +1,7 @@
 <div class="relative" data-language-selector>
   <button class="flex items-center gap-x-1 group" data-trigger type="button">
-    <svg class="w-4 h-4">
-      <use xlink:href="#csIcon"></use>
-    </svg>
-
-    <svg class="h-[6px] w-3 inline-block ml-1 group-focus:rotate-180 duration-150 transition-transform">
-      <use xlink:href="#angleIcon"></use>
-    </svg>
+    {{ icon("#csIcon", "w-4 h-4") }}
+    {{ icon("#angleIcon", "h-[6px] w-3 inline-block ml-1 group-focus:rotate-180 duration-150 transition-transform") }}
   </button>
 
   <div class="absolute hidden rounded-lg top-6 right-0 z-30 bg-white shadow-lg" data-popover>
@@ -16,9 +11,7 @@
           class="flex items-center gap-x-2 px-2 py-1 text-sm hover:text-yellow-400"
           href="#"
         >
-          <svg class="w-4 h-4">
-            <use xlink:href="#csIcon"></use>
-          </svg>
+          {{ icon("#csIcon", "w-4 h-4") }}
           Czech
         </a>
       </li>
@@ -28,9 +21,7 @@
           class="flex items-center gap-x-2 px-2 py-1 text-sm hover:text-yellow-400"
           href="#"
         >
-          <svg class="w-4 h-4">
-            <use xlink:href="#enIcon"></use>
-          </svg>
+          {{ icon("#enIcon", "w-4 h-4") }}
           English
         </a>
       </li>

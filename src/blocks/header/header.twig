@@ -50,13 +50,8 @@
         data-menu-trigger
         type="button"
       >
-        <svg class="group-[.opened]:hidden h-full w-full">
-          <use xlink:href="#burgerIcon"></use>
-        </svg>
-
-        <svg class="h-[8px] hidden group-[.opened]:block w-[9px] border-1 rounded-sm border-blue-900">
-          <use xlink:href="#crossIcon"></use>
-        </svg>
+        {{ icon("#burgerIcon", "group-[.opened]:hidden h-full w-full") }}
+        {{ icon("#crossIcon", "h-[8px] hidden group-[.opened]:block w-[9px] border-1 rounded-sm border-blue-900") }}
       </button>
     </div>
   </div>

@@ -3,11 +3,11 @@
     <div class="flex h-full items-center justify-between">
       <div class="flex items-center h-full gap-x-6">
         <p class="text-sm font-medium">
-          <a class="flex items-center gap-x-2 hover:text-yellow-400 transition-colors" href="mailto:info@sazeni-online.eu">
-            <svg class="w-5 h-5">
-              <use xlink:href="#emailIcon"></use>
-            </svg>
-
+          <a 
+            class="flex items-center gap-x-2 hover:text-yellow-400 transition-colors" 
+            href="mailto:info@sazeni-online.eu"
+          >
+            {{ icon("#emailIcon", "w-5 h-5") }}
             <span class="leading-[21px]">info@sazeni-online.eu</span>
           </a>
         </p>
@@ -17,17 +17,16 @@
 
       <div class="flex items-center gap-x-4">
         <p class="font-medium">
-          <a class="flex items-center gap-x-2 hover:text-yellow-400 transition-colors text-sm" href="#">
-            <svg class="h-4 w-4 inline-block">
-              <use xlink:href="#desktopIcon"></use>
-            </svg>
-
+          <a 
+            class="flex items-center gap-x-2 hover:text-yellow-400 transition-colors text-sm" 
+            href="#"
+          >
+            {{ icon("#desktopIcon", "h-4 w-4 inline-block") }}
             <span class="leading-[21px]">Evropské sázkovky a casína</span>
           </a>
         </p>
 
         <span class="inline-block bg-blue-900 h-3 w-[1px]"></span>
-
         {% include "languageSelector.twig" %}
       </div>
     </div>
