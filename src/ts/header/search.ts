@@ -1,9 +1,12 @@
 const initSearch = (): void => {
-  const wrapperElement = document.querySelector("[data-search]");
+  const wrapperElement =
+    document.querySelector<HTMLDivElement>("[data-search]");
 
   if (wrapperElement) {
-    const popoverElement = wrapperElement.querySelector("[data-popover]");
-    const triggerElement = wrapperElement.querySelector("[data-trigger]");
+    const popoverElement =
+      wrapperElement.querySelector<HTMLDivElement>("[data-popover]");
+    const triggerElement =
+      wrapperElement.querySelector<HTMLButtonElement>("[data-trigger]");
 
     if (popoverElement && triggerElement) {
       triggerElement.addEventListener("click", (): void => {

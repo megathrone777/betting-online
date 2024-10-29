@@ -1,12 +1,12 @@
-<div data-bonuses>
-  <div class="mb-10">
-    {% include "item.twig" %}
-    {% include "item.twig" %}
-    {% include "item.twig" %}
-    {% include "item.twig" %}
-    {% include "item.twig" %}
-    {% include "item.twig" %}
+<div data-bonuses class="relative">
+  <div class="mb-10 min-h-96 relative" data-bonuses-list>
+    {{ spinner() }}
   </div>
 
-  {% include "pagination.twig" %}
+  {{ spinner("hidden") }}
+
+  <div class="flex justify-between">
+    {% include "pagination.twig" %}
+    {% include "navigation.twig" %}
+  </div>
 </div>

@@ -2,8 +2,8 @@ import { initCodeCopy } from "./copyCode";
 import { initList } from "./list";
 
 const initBonuses = (): void => {
-  initCodeCopy();
   initList();
+  initCodeCopy();
 };
 
 export { initBonuses };

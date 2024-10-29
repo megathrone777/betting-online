@@ -1,21 +1,21 @@
 import copyToClipboard from "copy-to-clipboard";
 
 const initCodeCopy = (): void => {
-  const copyElements = document.querySelectorAll("[data-copy-code]");
+  document.addEventListener("click", ({ target }): void => {
+    const copyElement = (target as Element).closest(
+      "[data-copy-code]"
+    ) as HTMLParagraphElement;
 
-  if (copyElements && !!copyElements.length) {
-    for (const copyElement of copyElements) {
-      copyElement.addEventListener("click", ({ currentTarget }): void => {
-        const { dataset } = currentTarget as HTMLParagraphElement;
-        const { copyCode } = dataset;
+    if (copyElement) {
+      const { dataset } = copyElement as HTMLParagraphElement;
+      const { copyCode } = dataset;
 
-        if (copyCode) {
-          copyToClipboard(copyCode);
-          alert(`${copyCode} copied to clipboard!`);
-        }
-      });
+      if (copyCode) {
+        copyToClipboard(copyCode);
+        alert(`${copyCode} copied to clipboard!`);
+      }
     }
-  }
+  });
 };
 
 export { initCodeCopy };

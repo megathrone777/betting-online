@@ -1,15 +1,18 @@
 const initMenu = (): void => {
-  const wrapperElement = document.querySelector("[data-menu]");
-  const menuTriggerElement = document.querySelector("[data-menu-trigger]");
+  const wrapperElement = document.querySelector<HTMLDivElement>("[data-menu]");
+  const menuTriggerElement = document.querySelector<HTMLButtonElement>(
+    "[data-menu-trigger]"
+  );
 
   if (wrapperElement && menuTriggerElement) {
-    const triggerElements = wrapperElement.querySelectorAll(
+    const triggerElements = wrapperElement.querySelectorAll<HTMLButtonElement>(
       "[data-dropdown-trigger]"
     );
 
     if (triggerElements && !!triggerElements.length) {
       for (const triggerElement of triggerElements) {
-        const dropdownElement = triggerElement.querySelector("[data-dropdown]");
+        const dropdownElement =
+          triggerElement.querySelector<HTMLDivElement>("[data-dropdown]");
 
         if (dropdownElement) {
           triggerElement.addEventListener("click", (): void => {

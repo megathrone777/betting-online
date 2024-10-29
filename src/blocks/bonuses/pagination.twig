@@ -1,114 +1,88 @@
-<div class="flex justify-between" data-pagination>
-  <ul class="flex gap-x-[5px]">
-    <li 
-      class="
-        border border-blue-900 
-        cursor-pointer
-        font-medium
-        h-8 
-        leading-8 
-        rounded-lg 
-        text-[13px] text-center 
-        w-8 
-      "
-      data-page="1"
-    >
-      1
-    </li>
-    <li 
-      class="
-        border border-blue-900 
-        cursor-pointer
-        font-medium
-        h-8 
-        leading-8 
-        rounded-lg 
-        text-[13px] text-center 
-        w-8 
-      "
-      data-page="2"
-    >
-      2
-    </li>
-    <li 
-      class="
-        border border-blue-900 
-        cursor-pointer
-        font-medium
-        h-8 
-        leading-8 
-        rounded-lg 
-        text-[13px] text-center 
-        w-8 
-      "
-      data-page="3"
-    >
-      3
-    </li>
+<ul class="flex gap-x-[5px]" data-pagination>
+  <li 
+    class="
+      border border-gray-400
+      cursor-pointer
+      font-medium
+      h-8 
+      leading-8 
+      rounded-lg 
+      text-[13px] text-center text-blue-900
+      w-8
+      selected
+      hover:border-blue-900
+      [&.selected]:border-blue-900
+    "
+    data-page="1"
+  >
+    1
+  </li>
+  <li 
+    class="
+      border border-gray-400
+      cursor-pointer
+      font-medium
+      h-8 
+      leading-8 
+      rounded-lg 
+      text-[13px] text-center text-blue-900
+      w-8
+      hover:border-blue-900
+      [&.selected]:border-blue-900
+    "
+    data-page="2"
+  >
+    2
+  </li>
+  <li 
+    class="
+      border border-gray-400
+      cursor-pointer
+      font-medium
+      h-8 
+      leading-8 
+      rounded-lg 
+      text-[13px] text-center text-blue-900
+      w-8
+      hover:border-blue-900
+      [&.selected]:border-blue-900
+    "
+    data-page="3"
+  >
+    3
+  </li>
 
-    <li 
-      class="
-        border border-blue-900 
-        cursor-pointer
-        font-medium
-        h-8 
-        leading-8 
-        rounded-lg 
-        text-[13px] text-center 
-        w-8 
-      "
-    >
-      ...
-    </li>
-    <li 
-      class="
-        border border-blue-900 
-        cursor-pointer
-        font-medium
-        h-8 
-        leading-8 
-        rounded-lg 
-        text-[13px] text-center 
-        w-8 
-      "
-      data-page="10"
-    >
-      10
-    </li>
-  </ul>
-
-  <div class="flex gap-x-[5px]">
-    <button 
-      class="
-        border border-blue-900 
-        flex 
-        justify-center 
-        items-center 
-        rounded-lg h-8 w-8 overflow-hidden
-      " 
-      type="button"
-    >
-      <svg class="h-2 w-2">
-        <use xlink:href="#anglePaginationIcon"></use>
-      </svg>
-    </button>
-
-    <button 
-      class="
-        border border-blue-900 
-        flex 
-        justify-center 
-        items-center 
-        rounded-lg 
-        h-8 
-        w-8 
-        overflow-hidden
-      " 
-      type="button"
-    >
-      <svg class="h-2 w-2 rotate-180">
-        <use xlink:href="#anglePaginationIcon"></use>
-      </svg>
-    </button>
-  </div>
-</div>
+  <li 
+    class="
+      border border-gray-400
+      cursor-pointer
+      font-medium
+      h-8 
+      leading-8 
+      rounded-lg 
+      text-[13px] text-center text-blue-900
+      w-8
+      hover:border-blue-900
+      [&.selected]:border-blue-900
+    "
+  >
+    ...
+  </li>
+  <li 
+    class="
+      border border-gray-400
+      cursor-pointer
+      font-medium
+      h-8 
+      leading-8 
+      rounded-lg 
+      text-[13px] text-center text-blue-900
+      w-8
+      hover:border-blue-900
+      [&.selected]:border-blue-900
+    "
+    data-page="10"
+  >
+    10
+  </li>
+</ul>

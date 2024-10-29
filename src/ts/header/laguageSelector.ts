@@ -1,9 +1,13 @@
 const initLanguageSelector = (): void => {
-  const wrapperElement = document.querySelector("[data-language-selector]");
+  const wrapperElement = document.querySelector<HTMLDivElement>(
+    "[data-language-selector]"
+  );
 
   if (wrapperElement) {
-    const popoverElement = wrapperElement.querySelector("[data-popover]");
-    const triggerElement = wrapperElement.querySelector("[data-trigger]");
+    const popoverElement =
+      wrapperElement.querySelector<HTMLDivElement>("[data-popover]");
+    const triggerElement =
+      wrapperElement.querySelector<HTMLButtonElement>("[data-trigger]");
 
     if (popoverElement && triggerElement) {
       triggerElement.addEventListener("click", (): void => {

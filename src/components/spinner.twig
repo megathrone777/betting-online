@@ -1,0 +1,34 @@
+{% macro spinner(classes) %}
+  <div 
+    class="
+    bg-white
+      bg-opacity-70
+      flex
+      items-center
+      justify-center
+      absolute 
+      left-0 
+      right-0 
+      top-0 
+      h-full
+      bottom-0
+      w-full 
+      z-10
+      {{ classes }}
+    "
+    data-spinner
+  >
+    <div 
+      class="
+        h-14 
+        w-14 
+        m-auto
+        border-8
+        border-b-transparent
+        rounded-full 
+        border-yellow-400
+        animate-spin
+      "
+      ></div>
+  </div>
+{% endmacro %}
