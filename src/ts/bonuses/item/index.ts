@@ -24,10 +24,10 @@ const getItemTemplate = (
       <div 
         class="
           flex
-          group-hover:bg-yellow-50 group-[.opened]:bg-yellow-50
+          group-hover:bg-yellow-50 group-[.opened]:bg-yellow-50 md:group-[.opened]:bg-white
           items-center 
           justify-between 
-          lg:p-1 
+          lg:p-2
           md:flex-col md:group-hover:bg-transparent md:items-start md:p-0 
           p-4 
           transition-colors 
@@ -41,10 +41,10 @@ const getItemTemplate = (
             grid grid-areas-bonus-content grid-cols-[min-content]
             items-center
             justify-start
-            lg:basis-auto lg:gap-x-2 
-            max-w-[420px] 
+            lg:gap-x-2 
+            max-w-[400px] 
             md:basis-0 md:gap-y-2 md:grid-areas-bonus-content-mobile md:max-w-full md:mb-4 md:pt-4 md:px-4
-            xl:basis-[400px] xl:gap-x-3 
+            xl:basis-[380px] xl:gap-x-3 
           "
         >
           <div 
@@ -68,7 +68,7 @@ const getItemTemplate = (
 
           <div class="grid-in-badges flex items-center gap-x-2">
             ${renderBadges(badges)}
-            <p class="text-[11px] leading-[19px]">Expirace 22.8.2024</p>
+            <p class="text-[11px] leading-[19px] whitespace-nowrap">Expirace 22.8.2024</p>
           </div>
 
           ${
@@ -109,6 +109,7 @@ const getItemTemplate = (
             >
               12 500 CZK
             </p>
+
             <p class="text-gray-500 text-[10px] font-medium uppercase leading-[10px]">
               Max výše Bonusu
             </p>
@@ -123,11 +124,9 @@ const getItemTemplate = (
                 font-bold 
                 leading-6 
                 uppercase 
-                group-hover:text-transparent 
-                group-hover:bg-gradient-to-b 
+                group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:bg-clip-text
                 from-[#ff641a] 
                 to-[#ff9100] 
-                group-hover:bg-clip-text 
                 xl:text-sm 
                 lg:text-xs
               "
@@ -146,7 +145,7 @@ const getItemTemplate = (
             gap-y-2 
             items-start 
             justify-center 
-            md:flex-col-reverse md:items-stretch md:w-full 
+            md:flex-col-reverse md:items-stretch md:w-full md:gap-y-0
           "
         >
           <div class="md:flex">
@@ -194,17 +193,18 @@ const getItemTemplate = (
 
           <div
             class="
-              group-[.opened]:h-[calc-size(auto,size)] 
-              h-0 
-              hidden 
-              md:block
-              overflow-hidden 
-              px-4 
-              transition-[height] 
+              grid-rows-[0fr]
+              group-[.opened]:grid-rows-[1fr]
+              hidden
+              md:grid
+              px-4
+              transition-[grid-template-rows]
             "
           >
-            ${renderInfo}
-            ${renderSections}
+            <div class="overflow-hidden">
+              ${renderInfo}
+              ${renderSections}
+            </div>
           </div>
 
           <div 
@@ -215,7 +215,7 @@ const getItemTemplate = (
               md:border-b 
               md:border-b-transparent 
               md:group-[.opened]:border-b-gray-200
-              md:group-[.opened]:pb-4
+              md:pb-4
             "
           >
             <p 
@@ -246,10 +246,18 @@ const getItemTemplate = (
       </div>
 
       <div
-        class="px-4 overflow-hidden h-0 transition-[height] group-[.opened]:h-[calc-size(auto,size)] md:hidden"
+        class="
+          grid grid-rows-[0fr]
+          group-[.opened]:grid-rows-[1fr]
+          px-4
+          transition-[grid-template-rows]
+          md:hidden
+        "
       >
-        ${renderInfo}
-        ${renderSections}
+        <div class="overflow-hidden">
+          ${renderInfo}
+          ${renderSections}
+        </div>
       </div>
 
       <button

@@ -7,15 +7,15 @@
   ]
 %}
 
-<div class="h-20 mb-24 xl:mb-14 lg:max-w-[342px] lg:mx-auto lg:h-auto lg:mb-14">
-  <ul class="flex items-center justify-between h-full gap-x-[10px] xl:gap-x-0 lg:flex-col lg:gap-y-6">
+<div class="mb-24 lg:mb-14">
+  <ul class="flex items-center justify-between gap-x-[10px] xl:gap-x-0 lg:flex-wrap lg:gap-y-6 md:flex-col md:items-stretch md:max-w-96 xs:max-w-full">
     {% for item in items %}
-      <li class="px-6 xl:px-3 lg:rounded-2xl lg:bg-white lg:h-20 lg:w-full lg:px-6">
+      <li class="lg:rounded-2xl lg:basis-1/2 md:h-20 md:basis-auto md:bg-white">
         <a
-          class="flex items-center h-full gap-x-4 group xl:gap-x-2 lg:gap-x-4"
+          class="flex items-center gap-x-4 group xl:gap-x-2 md:h-full lg:gap-x-2 px-4 lg:px-1 xl:px-3 md:px-6"
           href="{{ item.href }}" 
           target="_blank" 
-          title="{{ item.title }}"
+          title="{{ item.title | capitalize }}"
         >
           {{ icon("#" ~ item.iconId ~ "Icon3", "w-8 h-8") }}
           

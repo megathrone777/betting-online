@@ -1,5 +1,5 @@
 const renderInfo = `
-  <div class="flex items-center justify-between pb-6 border-b-[1px] mb-4 pt-4 md:flex-wrap md:gap-y-4 md:pt-2">
+  <div class="flex items-center justify-between pb-6 border-b-[1px] mb-4 pt-4 md:flex-wrap md:gap-y-4">
     <div class="flex gap-x-2 md:w-full md:justify-between md:items-center">
       <div 
         class="
